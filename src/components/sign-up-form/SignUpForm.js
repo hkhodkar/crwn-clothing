@@ -67,7 +67,7 @@ const SignUpForm = () => {
                     label='Email'
                     type="email"
                     onChange={handleChange}
-                    name="Email"
+                    name="email"
                     value={email}
                 />
 

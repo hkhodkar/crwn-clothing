@@ -8,7 +8,7 @@ const BUTTON_TYPE_CLASSES = {
 
 const Button = ({ children, buttonType, ...otherprops }) => {
     return (
-        <button className={`${classes['button-container']} ${classes[`${BUTTON_TYPE_CLASSES[buttonType]}`]}`}>{children}</button>
+        <button  {...otherprops} className={`${classes['button-container']} ${classes[`${BUTTON_TYPE_CLASSES[buttonType]}`]}`}>{children}</button>
     )
 }
 
