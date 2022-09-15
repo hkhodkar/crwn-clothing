@@ -15,6 +15,7 @@ const NavigationBar = props => {
                 </div>
                 <div className={classes['nav-links-container']}>
                     <Link className={classes['nav-link']} to='/shop'>Shop</Link>
+                    <Link className={classes['nav-link']} to='/sign-in'>Sign in</Link>
                 </div>
             </div>
             <Outlet />
