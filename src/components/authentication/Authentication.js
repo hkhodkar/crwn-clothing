@@ -1,8 +1,7 @@
-import { Fragment } from 'react';
 
 import classes from './Authentication.module.scss'
 import SignUpForm from '../sign-up-form/SignUpForm';
-import SignIn from '../sign-in-form/SignIn';
+import SignIn from '../sign-in-form/SignInForm';
 
 const Authentication = () => {
 
