@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, } from "react";
 import { createAuthUserWithEmailAndPassword, createUserDocumentFromAuth } from "../../utils/firebase/firebase.utils";
 
 import FormInput from '../form-input/FormInput'
@@ -84,10 +84,10 @@ const SignUpForm = () => {
                     required
                     type="password"
                     onChange={handleChange}
-                    name="password"
-                    value={password} />
+                    name="confirmPassword"
+                    value={confirmPassword} />
 
-                <Button  type="submit">Sign Up</Button>
+                <Button type="submit">Sign Up</Button>
             </form>
         </div>
     )

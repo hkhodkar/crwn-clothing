@@ -1,8 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 
-import NavigationBar from './pages/navigation/NavigationBar';
-
 import Home from "./pages/home/Home";
+import NavigationBar from './pages/navigation/NavigationBar';
 import Authentication from './components/authentication/Authentication';
 
 const Shop = () => {
