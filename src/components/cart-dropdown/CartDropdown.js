@@ -1,4 +1,5 @@
 import { useContext } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 import { CartContext } from '../../contexts/CartContext'
 
@@ -9,13 +10,17 @@ import CartItem from '../cart-item/CartItem'
 const CardDropdown = props => {
 
     const { cartItems, cartCount } = useContext(CartContext);
+    const navigate = useNavigate();
+    const goToChecoutHandler = () => {
+        navigate('/checkout')
+    }
 
     return (
         <div className={classes['cart-dropdown-container']}>
             <div className={classes['cart-items']}>
                 {cartCount === 0 ? <span className={classes['empty-message']}>No item exist in cart</span> : cartItems.map(item => <CartItem key={item.id} CartItem={item} />)}
             </div>
-            <Button >GO TO CHECKOUT</Button>
+            <Button onClick={goToChecoutHandler} >GO TO CHECKOUT</Button>
         </div>
     )
 }
