@@ -1,10 +1,10 @@
-import { useSelector } from "react-redux"
-import { Fragment, useContext } from "react"
+import { Fragment } from "react"
+import { useSelector } from "react-redux";
 import { Outlet, Link } from "react-router-dom"
 
-import { CartContext } from "../../contexts/CartContext"
 import { signOutUser } from '../../utils/firebase/firebase.utils'
 import { selectCurrentUser } from "../../store/user/user.selector"
+import { selectIsCartOpen } from "../../store/cart/cart-selector"
 
 import classes from './NavigationBar.module.scss'
 import { ReactComponent as Logo } from '../../assets/crown.svg'
@@ -16,7 +16,7 @@ const NavigationBar = props => {
 
 
     const currentUser = useSelector(selectCurrentUser)
-    const { isCartOpen } = useContext(CartContext)
+    const isCartOpen = useSelector(selectIsCartOpen)
 
     const signOutHandle = async () => {
         await signOutUser();
